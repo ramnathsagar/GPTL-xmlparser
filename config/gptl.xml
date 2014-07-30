@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+
+<trace enabled="yes"
+ home="/home/sshuser/gptl-2.005"
+ initial-mode="detail"
+ type="gptl-profile"
+ xml-parser-id="Id: setxmlConfig.c,v 2014-01-15 23:55:18 ramnath sai (ramnath.sagar@gmail.com) Exp $"
+>
+  <mpi enabled="no" change-at="burst">
+    <counters enabled="yes" />
+  </mpi>
+
+  <openmp enabled="no">
+    <locks enabled="no" />
+    <counters enabled="yes" />
+  </openmp>
+
+  <callers enabled="yes" depth="1-3" />
+  <!-- gettimeofday / nanotime / MPI_Wtime / clock_gettime / PAPI_get_real_usec / read_real_time - AIX only-->
+  <timer option="nanotime" />
+
+  <PAPI enabled="no">PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_L1_DCM,PAPI_L2_ICM</PAPI>
+
+</trace>
